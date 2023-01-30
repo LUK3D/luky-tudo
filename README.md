@@ -11,7 +11,7 @@ A todo list project with Super Powers 🔥.
 ## Structure
 This project is composed in two parts:
 ### Flutter Project 
-You can find all the code related to flutter in lib File
+You can find all the code related to flutter on the lib Folder
 
 ### Python project
 Python was used to create the speech to text function and we use it as a child process on flutter app.
