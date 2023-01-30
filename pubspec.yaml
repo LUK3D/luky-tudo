@@ -38,6 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   get_storage: ^2.0.3
+  process_run: ^0.12.5+2
+  heroicons: ^0.7.0
+  calendar_date_picker2: ^0.3.7
+  audioplayers: ^3.0.1
+  window_manager: ^0.3.0
 
 dev_dependencies:
   flutter_test:
