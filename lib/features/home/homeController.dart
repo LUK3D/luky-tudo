@@ -56,11 +56,14 @@ class HomeController extends GetxController {
     isLoading.value = false;
   }
 
-  void removeAudioFromCurrentItem(String path) {
+  void removeAudioFromCurrentItem(String path) async {
     currentTodoItem.value.audioFiles.remove(path);
     currentTodoItem.value = TodoItemModel.fromJson(currentTodoItem.toJson());
     try {
-      File(path).delete();
+      final f = File(path);
+      if (await f.exists()) {
+        f.delete();
+      }
     } catch (e) {
       print(e);
     }
@@ -127,11 +130,10 @@ class HomeController extends GetxController {
   void deleteItem(TodoItemModel item) {
     todoList.remove(item);
     item.audioFiles.forEach(
-      (path) {
-        try {
-          File(path).delete();
-        } catch (e) {
-          print(e);
+      (path) async {
+        final f = File(path);
+        if (await f.exists()) {
+          f.delete();
         }
       },
     );

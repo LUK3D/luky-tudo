@@ -1,1 +1,1 @@
-C:\\_projects\\Python\\speechregosnition\\output\\speech_rec\\speech_rec.exe
+speechrecognition\\output\\speech_rec\\speech_rec.exe
